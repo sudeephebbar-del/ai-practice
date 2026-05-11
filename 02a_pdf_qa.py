@@ -24,7 +24,7 @@ def count_tokens_approx(text: str) -> int:
 
 def ask_about_document(doc_text: str, question: str) -> str:
     """Stuff the entire document into the prompt and ask a question."""
-    prompt = f"""You are a technical document analyst.
+    prompt = f"""You are a travel specialist.
 
 DOCUMENT:
 {doc_text}
@@ -47,7 +47,7 @@ say "Not found in this document."
     return response.choices[0].message.content
 
 # ── Run it ───────────────────────────────────────────────────────
-PDF_PATH = r"C:\OneDrive\Personal\Career\Learnings\2026\Verizon\AI\PDFs\safecopipost_289393782_827047552_PubApi_Forms_Package.pdf"  # change this
+PDF_PATH = r"C:\OneDrive\Personal\Career\Learnings\2026\Verizon\AI\files\Hilton Beachfront Resort and Spa Hilton Head Island Reviews & Prices _ U.S. News Travel.pdf"  # change this
 
 print("Extracting text...")
 doc_text = extract_pdf_text(PDF_PATH)
@@ -55,9 +55,10 @@ print(f"Extracted {len(doc_text):,} characters")
 
 questions = [
     "What is the main purpose of this document?",
-    "What are the key technical requirements mentioned?",
+    "What are the key features of this resort?",
     "List any limitations or constraints described.",
-    "What are the alternate insurance companies that can provide similar services not mentioned in the document?",
+    "Does this resort have lazy river",
+    "Does this resort have infinity pool",
 ]
 
 for q in questions:

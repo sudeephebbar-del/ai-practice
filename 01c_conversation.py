@@ -11,8 +11,8 @@ client = OpenAI()
 
 # The conversation history grows with each turn
 messages = [
-    {"role": "system", "content":
-     "You are a BSS platform expert. Be concise."}
+#    {"role": "system", "content":
+#     "You are a BSS platform expert. Be concise."}
 ]
 
 def chat(user_input: str) -> str:
@@ -33,8 +33,8 @@ def chat(user_input: str) -> str:
 
 # A multi-turn conversation
 print(chat("What is Oracle BRM?"))
-print(chat("What are main limitations?"))      # refers to "its" (BRM)
-print(chat("What would you replace with?"))     # "it" still means BRM
+print(chat("What are it's main limitations?"))      # refers to "its" (BRM)
+print(chat("What would you replace it with?"))     # "it" still means BRM
 print(f"\nTotal messages in history: {len(messages)}")
 
 # Print token usage (important for cost awareness)
