@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "bss-rag": {
+      "command": "node",
+      "args": ["rag-mcp-server/index.js"],
+      "env": {
+        "RAG_BASE_URL": "http://localhost:8002"
+      }
+    }
+  }
+}
